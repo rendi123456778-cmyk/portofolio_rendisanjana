@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyek - Rendi Sanjana</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-32x32.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#E8DCC4] text-[#123F36]">
+    <!-- navbar -->
+    <header
+      class="bg-[#123F36] flex justify-between items-center px-6 py-4 shadow-sm sticky top-0 z-50"
+    >
+      <a href="index.html" class="text-[#E8DCC4] font-bold text-lg"
+        >Rendi Sanjana</a
+      >
+
+      <!-- Butang Hamburger untuk Mobile -->
+      <button
+        id="mobile-btn"
+        class="md:hidden text-[#E8DCC4] focus:outline-none"
+      >
+        <svg
+          class="w-7 h-7"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+      </button>
+
+      <!-- Menu Navigasi -->
+      <ul
+        id="mobile-menu"
+        class="hidden absolute top-full left-0 w-full bg-[#123F36] md:static md:flex md:w-auto md:bg-transparent flex-col md:flex-row gap-6 p-6 md:p-0 shadow-lg md:shadow-none text-center md:text-left transition-all"
+      >
+        <li>
+          <a
+            href="index.html"
+            class="block text-[#E8DCC4] hover:text-[#C49A45] transition"
+            >Beranda</a
+          >
+        </li>
+        <li>
+          <a
+            href="index.html#tentang"
+            class="block text-[#E8DCC4] hover:text-[#C49A45] transition"
+            >Tentang</a
+          >
+        </li>
+        <li>
+          <a
+            href="proyek.html"
+            class="block text-[#E8DCC4] hover:text-[#C49A45] transition font-semibold"
+            >Proyek</a
+          >
+        </li>
+        <li>
+          <a
+            href="pengalaman.html"
+            class="block text-[#E8DCC4] hover:text-[#C49A45] transition"
+            >Pengalaman</a
+          >
+        </li>
+        <li>
+          <a
+            href="index.html#kontak"
+            class="block text-[#E8DCC4] hover:text-[#C49A45] transition"
+            >Kontak</a
+          >
+        </li>
+      </ul>
+    </header>
+
+    <main>
+      <!-- proyek -->
+      <section class="max-w-5xl mx-auto px-6 py-20">
+        <h2 class="text-3xl font-bold text-center mb-10 text-[#C49A45]">
+          Proyek Saya
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div
+            class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:-translate-y-1 hover:shadow-lg transition"
+          >
+            <!-- proyek  1 -->
+            <div class="h-40 bg-gray-200">
+              <img
+                src="img/image.png"
+                alt="proyek kalkulator"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h3 class="mt-4 px-5 font-semibold">Kalkulator</h3>
+            <p class="px-5 mt-2 text-sm text-gray-500">
+              Web kalkulator simpel untuk menghitung volume dan luas bangun
+              ruang.
+            </p>
+            <div class="flex gap-2 flex-wrap px-5 mt-3">
+              <span
+                class="text-xs px-3 py-1 border border-gray-300 rounded-full text-gray-500"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 border border-gray-300 rounded-full text-gray-500"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 border border-gray-300 rounded-full text-gray-500"
+                >JavaScript</span
+              >
+            </div>
+            <a
+              href="kalkulator.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block px-5 mt-4 mb-5 text-[#123F36] font-semibold text-sm hover:underline"
+              >Lihat Proyek</a
+            >
+          </div>
+          <!-- proyek  2 -->
+          <div
+            class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:-translate-y-1 hover:shadow-lg transition"
+          >
+            <div class="h-40 bg-gray-200">
+              <img
+                src="img/image.png"
+                alt="proyek bangun ruang"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h3 class="mt-4 px-5 font-semibold">Bangun Ruang</h3>
+            <p class="px-5 mt-2 text-sm text-gray-500">
+              Halaman web edukatif untuk pengenalan bentuk dan rumus bangun
+              ruang.
+            </p>
+            <div class="flex gap-2 flex-wrap px-5 mt-3">
+              <span
+                class="text-xs px-3 py-1 border border-gray-300 rounded-full text-gray-500"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 border border-gray-300 rounded-full text-gray-500"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 border border-gray-300 rounded-full text-gray-500"
+                >JavaScript</span
+              >
+            </div>
+            <a
+              href="kubusBalok.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block px-5 mt-4 mb-5 text-[#123F36] font-semibold text-sm hover:underline"
+              >Lihat Proyek</a
+            >
+          </div>
+          <!-- proyek  3-->
+          <div
+            class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:-translate-y-1 hover:shadow-lg transition"
+          >
+            <div class="h-40 bg-gray-200">
+              <img
+                src="img/image.png"
+                alt="proyek"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h3 class="mt-4 px-5 font-semibold">Nama Proyek</h3>
+            <p class="px-5 mt-2 text-sm text-gray-500">
+              Deskripsi singkat tentang proyek ini.
+            </p>
+            <div class="flex gap-2 flex-wrap px-5 mt-3">
+              <span
+                class="text-xs px-3 py-1 border border-gray-300 rounded-full text-gray-500"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 border border-gray-300 rounded-full text-gray-500"
+                >CSS</span
+              >
+            </div>
+            <a
+              href="#"
+              class="block px-5 mt-4 mb-5 text-[#123F36] font-semibold text-sm hover:underline"
+              >Lihat Proyek</a
+            >
+          </div>
+          <!-- proyek  4 -->
+          <div
+            class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:-translate-y-1 hover:shadow-lg transition"
+          >
+            <div class="h-40 bg-gray-200">
+              <img
+                src="img/image.png"
+                alt="proyek"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h3 class="mt-4 px-5 font-semibold">Nama Proyek</h3>
+            <p class="px-5 mt-2 text-sm text-gray-500">
+              Deskripsi singkat tentang proyek ini.
+            </p>
+            <div class="flex gap-2 flex-wrap px-5 mt-3">
+              <span
+                class="text-xs px-3 py-1 border border-gray-300 rounded-full text-gray-500"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 border border-gray-300 rounded-full text-gray-500"
+                >CSS</span
+              >
+            </div>
+            <a
+              href="#"
+              class="block px-5 mt-4 mb-5 text-[#123F36] font-semibold text-sm hover:underline"
+              >Lihat Proyek</a
+            >
+          </div>
+          <!-- proyek  5 -->
+          <div
+            class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:-translate-y-1 hover:shadow-lg transition"
+          >
+            <div class="h-40 bg-gray-200">
+              <img
+                src="img/image.png"
+                alt="proyek"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h3 class="mt-4 px-5 font-semibold">Nama Proyek</h3>
+            <p class="px-5 mt-2 text-sm text-gray-500">
+              Deskripsi singkat tentang proyek ini.
+            </p>
+            <div class="flex gap-2 flex-wrap px-5 mt-3">
+              <span
+                class="text-xs px-3 py-1 border border-gray-300 rounded-full text-gray-500"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 border border-gray-300 rounded-full text-gray-500"
+                >CSS</span
+              >
+            </div>
+            <a
+              href="#"
+              class="block px-5 mt-4 mb-5 text-[#123F36] font-semibold text-sm hover:underline"
+              >Lihat Proyek</a
+            >
+          </div>
+          <!-- proyek  6 -->
+          <div
+            class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:-translate-y-1 hover:shadow-lg transition"
+          >
+            <div class="h-40 bg-gray-200">
+              <img
+                src="img/image.png"
+                alt="proyek"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h3 class="mt-4 px-5 font-semibold">Nama Proyek</h3>
+            <p class="px-5 mt-2 text-sm text-gray-500">
+              Deskripsi singkat tentang proyek ini.
+            </p>
+            <div class="flex gap-2 flex-wrap px-5 mt-3">
+              <span
+                class="text-xs px-3 py-1 border border-gray-300 rounded-full text-gray-500"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 border border-gray-300 rounded-full text-gray-500"
+                >CSS</span
+              >
+            </div>
+            <a
+              href="#"
+              class="block px-5 mt-4 mb-5 text-[#123F36] font-semibold text-sm hover:underline"
+              >Lihat Proyek</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="text-center py-6 text-sm text-gray-500 border-t border-gray-200"
+    >
+      <p>&copy; 2026 Rendi Sanjana. Dibuat dengan HTML &amp; Tailwind CSS.</p>
+    </footer>
+
+    <!-- mobile -->
+    <script>
+      const btn = document.getElementById("mobile-btn");
+      const menu = document.getElementById("mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+        menu.classList.toggle("flex");
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

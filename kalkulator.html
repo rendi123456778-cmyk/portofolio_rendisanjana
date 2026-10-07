@@ -26,66 +26,81 @@
   </head>
 
   <body
-    class="bg-[#E8DCC4] text-[#123F36] min-h-screen flex items-center justify-center px-4"
+    class="bg-[#E8DCC4] text-[#123F36] min-h-screen flex flex-col justify-between items-center px-6 pt-10"
   >
-    <section class="max-w-md w-full">
-      <a
-        href="index.html"
-        class="inline-block mb-6 text-sm text-[#123F36]/70 hover:text-[#123F36] transition"
-        >&larr; Kembali ke Portofolio</a
-      >
+    <main class="w-full flex flex-col items-center flex-grow justify-center">
+      <section class="max-w-md w-full">
+        <a
+          href="proyek.html"
+          class="inline-block mb-6 text-sm text-[#123F36]/70 hover:text-[#123F36] transition"
+          >&larr; Kembali</a
+        >
 
-      <h1 class="text-2xl font-bold text-center mb-8">Kalkulator Sederhana</h1>
+        <h1 class="text-2xl font-bold text-center mb-8">
+          Kalkulator Sederhana
+        </h1>
 
-      <div
-        class="bg-white border border-[#C49A45]/30 rounded-lg p-6 flex flex-col gap-4 shadow-sm"
-      >
-        <input
-          id="angka1"
-          type="number"
-          placeholder="Angka pertama"
-          class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-[#2A6B5C]"
-        />
+        <div
+          class="bg-white border border-[#C49A45]/30 rounded-lg p-6 flex flex-col gap-4 shadow-sm w-full"
+        >
+          <input
+            id="angka1"
+            type="number"
+            placeholder="Angka pertama"
+            class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-[#2A6B5C]"
+          />
 
-        <input
-          id="angka2"
-          type="number"
-          placeholder="Angka kedua"
-          class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-[#2A6B5C]"
-        />
+          <input
+            id="angka2"
+            type="number"
+            placeholder="Angka kedua"
+            class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-[#2A6B5C]"
+          />
 
-        <div class="grid grid-cols-4 gap-2">
-          <button
-            onclick="hitung('+')"
-            class="bg-[#2A6B5C] text-white rounded-md py-2 hover:bg-[#123F36] transition"
-          >
-            +
-          </button>
-          <button
-            onclick="hitung('-')"
-            class="bg-[#2A6B5C] text-white rounded-md py-2 hover:bg-[#123F36] transition"
-          >
-            -
-          </button>
-          <button
-            onclick="hitung('*')"
-            class="bg-[#2A6B5C] text-white rounded-md py-2 hover:bg-[#123F36] transition"
-          >
-            &times;
-          </button>
-          <button
-            onclick="hitung('/')"
-            class="bg-[#2A6B5C] text-white rounded-md py-2 hover:bg-[#123F36] transition"
-          >
-            &divide;
-          </button>
+          <div class="grid grid-cols-4 gap-2">
+            <button
+              onclick="hitung('+')"
+              class="bg-[#2A6B5C] text-white rounded-md py-2 hover:bg-[#123F36] transition"
+            >
+              +
+            </button>
+            <button
+              onclick="hitung('-')"
+              class="bg-[#2A6B5C] text-white rounded-md py-2 hover:bg-[#123F36] transition"
+            >
+              -
+            </button>
+            <button
+              onclick="hitung('*')"
+              class="bg-[#2A6B5C] text-white rounded-md py-2 hover:bg-[#123F36] transition"
+            >
+              &times;
+            </button>
+            <button
+              onclick="hitung('/')"
+              class="bg-[#2A6B5C] text-white rounded-md py-2 hover:bg-[#123F36] transition"
+            >
+              &divide;
+            </button>
+          </div>
+
+          <p class="text-center text-lg font-semibold mt-2">
+            Hasil: <span id="hasil" class="text-[#C49A45]">0</span>
+          </p>
+          <!-- pesan error -->
+          <p id="pesanError" class="text-center text-red-500 text-sm hidden">
+            &lt;---hurup kecil ---&gt;
+          </p>
         </div>
+      </section>
+    </main>
 
-        <p class="text-center text-lg font-semibold mt-2">
-          Hasil: <span id="hasil" class="text-[#C49A45]">0</span>
-        </p>
-      </div>
-    </section>
+    <!-- footer -->
+    <footer
+      class="w-full text-center py-6 mt-10 text-sm text-gray-500 border-t border-[#C49A45]/30"
+    >
+      <p>&copy; 2026 Rendi Sanjana. Dibuat dengan HTML &amp; Tailwind CSS.</p>
+    </footer>
 
     <script src="kalkulator.js"></script>
   </body>

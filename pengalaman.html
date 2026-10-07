@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pengalaman - Rendi Sanjana</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-32x32.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#E8DCC4] text-[#123F36]">
+    <!-- navbar -->
+    <header
+      class="bg-[#123F36] flex justify-between items-center px-6 py-4 shadow-sm sticky top-0 z-50"
+    >
+      <a href="index.html" class="text-[#E8DCC4] font-bold text-lg"
+        >Rendi Sanjana</a
+      >
+
+      <!-- butang hamburger untuk mobile -->
+      <button
+        id="mobile-btn"
+        class="md:hidden text-[#E8DCC4] focus:outline-none"
+      >
+        <svg
+          class="w-7 h-7"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+      </button>
+
+      <!-- Menu Navigasi -->
+      <ul
+        id="mobile-menu"
+        class="hidden absolute top-full left-0 w-full bg-[#123F36] md:static md:flex md:w-auto md:bg-transparent flex-col md:flex-row gap-6 p-6 md:p-0 shadow-lg md:shadow-none text-center md:text-left transition-all"
+      >
+        <li>
+          <a
+            href="index.html"
+            class="block text-[#E8DCC4] hover:text-[#C49A45] transition"
+            >Beranda</a
+          >
+        </li>
+        <li>
+          <a
+            href="index.html#tentang"
+            class="block text-[#E8DCC4] hover:text-[#C49A45] transition"
+            >Tentang</a
+          >
+        </li>
+        <li>
+          <a
+            href="proyek.html"
+            class="block text-[#E8DCC4] hover:text-[#C49A45] transition"
+            >Proyek</a
+          >
+        </li>
+        <li>
+          <a
+            href="pengalaman.html"
+            class="block text-[#E8DCC4] hover:text-[#C49A45] transition font-semibold"
+            >Pengalaman</a
+          >
+        </li>
+        <li>
+          <a
+            href="index.html#kontak"
+            class="block text-[#E8DCC4] hover:text-[#C49A45] transition"
+            >Kontak</a
+          >
+        </li>
+      </ul>
+    </header>
+
+    <main>
+      <section class="bg-[#E8DCC4]">
+        <div class="max-w-5xl mx-auto px-6 py-20">
+          <h2 class="text-3xl font-bold text-center mb-14 text-[#C49A45]">
+            Pengalaman &amp; Pendidikan
+          </h2>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-y-10 md:gap-y-0 md:gap-x-10"
+          >
+            <!-- KOLOM KIRI: PENGALAMAN -->
+            <div
+              class="text-left md:text-right pr-0 md:pr-8 border-b-2 md:border-b-0 md:border-r-2 border-gray-300 pb-10 md:pb-0"
+            >
+              <h3 class="text-lg font-bold mb-8 text-[#123F36]">Pengalaman</h3>
+
+              <div class="mb-10">
+                <p class="text-blue-600 text-sm font-semibold mb-1">
+                  2024-2025
+                </p>
+                <h4 class="font-semibold">
+                  Youth Science Camp EMBRACING AI ARTIFICIAL INTELLIGENCE 2024
+                </h4>
+                <p class="text-gray-500 text-sm mb-2">Brida NTB</p>
+                <p class="text-gray-500 text-sm">
+                  Mengikuti kegiatan edukasi dan diskusi mengenai Artificial
+                  Intelligence (AI), dengan fokus mempelajari dasar-dasar
+                  kecerdasan buatan serta potensi pemanfaatannya dalam ekosistem
+                  teknologi.
+                </p>
+              </div>
+              <div class="mt-12 md:mt-24">
+                <p class="text-blue-600 text-sm font-semibold mb-1">2024</p>
+                <h4 class="font-semibold">MikroTik Academy Olympiad</h4>
+                <p class="text-gray-500 text-sm mb-2">MikroTik</p>
+                <p class="text-gray-500 text-sm">
+                  Berpartisipasi sebagai kompetitor dalam ajang kompetisi
+                  jaringan MikroTik hingga tingkat kabupaten, menguji kemampuan
+                  teknis dalam konfigurasi, routing, dan manajemen sistem
+                  jaringan.
+                </p>
+              </div>
+            </div>
+
+            <!-- KOLOM KANAN: PENDIDIKAN -->
+            <div class="text-left pl-0 md:pl-8 pt-4 md:pt-0">
+              <h3 class="text-lg font-bold mb-8 text-[#123F36] mt-0 md:mt-16">
+                Pendidikan
+              </h3>
+
+              <div class="mt-6 mb-10">
+                <p class="text-blue-600 text-sm font-semibold mb-1">
+                  2025-Sekarang
+                </p>
+                <h4 class="font-semibold">Universitas Pendidikan Ganesha</h4>
+                <p class="text-gray-500 text-sm mb-2">Jurusan TRPL</p>
+                <p class="text-gray-500 text-sm">
+                  Mahasiswa yang aktif mendalami rekayasa perangkat lunak dengan
+                  fokus pada pemrograman berorientasi objek, pengembangan
+                  arsitektur backend, serta pengelolaan basis data relasional.
+                </p>
+              </div>
+
+              <div class="mt-12 md:mt-24">
+                <p class="text-blue-600 text-sm font-semibold mb-1">
+                  2022 - 2025
+                </p>
+                <h4 class="font-semibold">Smkn 1 Masbagik</h4>
+                <p class="text-gray-500 text-sm mb-2">Jurusan TKJ</p>
+                <p class="text-gray-500 text-sm">
+                  Mendalami ilmu Teknik Komputer dan Jaringan (TKJ) yang
+                  mencakup perakitan perangkat keras, instalasi jaringan lokal
+                  (LAN/WLAN), hingga pemeliharaan sistem komputer dan
+                  troubleshooting secara komprehensif.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="text-center py-6 text-sm text-gray-500 border-t border-gray-200"
+    >
+      <p>&copy; 2026 Rendi Sanjana. Dibuat dengan HTML &amp; Tailwind CSS.</p>
+    </footer>
+
+    <!--  mobile -->
+    <script>
+      const btn = document.getElementById("mobile-btn");
+      const menu = document.getElementById("mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+        menu.classList.toggle("flex");
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

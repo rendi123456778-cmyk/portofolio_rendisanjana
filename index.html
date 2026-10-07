@@ -10,308 +10,206 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/style.css" />
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-32x32.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-32x32.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-[#E8DCC4] text-[#123F36]">
-    <!-- buat navbar -->
+    <!-- navbar -->
     <header
-      class="bg-[#123F36] flex justify-between items-center px-6 py-4 bg-white shadow-sm sticky top-0 z-10"
+      class="bg-[#123F36] flex justify-between items-center px-6 py-4 shadow-sm sticky top-0 z-50"
     >
-      <div class="text-[#E8DCC4] font-bold text-lg">Rendi Sanjana</div>
+      <a href="index.html" class="text-[#E8DCC4] font-bold text-lg"
+        >Rendi Sanjana</a
+      >
 
-      <ul class="flex gap-6">
+      <!-- Butang Hamburger untuk Mobile -->
+      <button
+        id="mobile-btn"
+        class="md:hidden text-[#E8DCC4] focus:outline-none"
+      >
+        <svg
+          class="w-7 h-7"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+      </button>
+
+      <!-- Menu Navigasi -->
+      <ul
+        id="mobile-menu"
+        class="hidden absolute top-full left-0 w-full bg-[#123F36] md:static md:flex md:w-auto md:bg-transparent flex-col md:flex-row gap-6 p-6 md:p-0 shadow-lg md:shadow-none text-center md:text-left transition-all"
+      >
+        <li>
+          <a
+            href="index.html"
+            class="block text-[#E8DCC4] hover:text-[#C49A45] transition font-semibold"
+            >Beranda</a
+          >
+        </li>
         <li>
           <a
             href="#tentang"
-            class="text-gray-600 hover:text-blue-600 transition"
+            class="block text-[#E8DCC4] hover:text-[#C49A45] transition"
             >Tentang</a
           >
         </li>
         <li>
-          <a href="#skill" class="text-gray-600 hover:text-blue-600 transition"
-            >Skill</a
-          >
-        </li>
-        <li>
-          <a href="#proyek" class="text-gray-600 hover:text-blue-600 transition"
+          <a
+            href="proyek.html"
+            class="block text-[#E8DCC4] hover:text-[#C49A45] transition"
             >Proyek</a
           >
         </li>
         <li>
           <a
-            href="#pengalaman"
-            class="text-gray-600 hover:text-blue-600 transition"
+            href="pengalaman.html"
+            class="block text-[#E8DCC4] hover:text-[#C49A45] transition"
             >Pengalaman</a
           >
         </li>
         <li>
-          <a href="#kontak" class="text-gray-600 hover:text-blue-600 transition"
+          <a
+            href="#kontak"
+            class="block text-[#E8DCC4] hover:text-[#C49A45] transition"
             >Kontak</a
           >
         </li>
       </ul>
     </header>
-    <!-- beranda -->
-    <section
-      id="beranda"
-      class="bgflex flex-wrap items-center justify-between gap-10 px-6 py-20 max-w-5xl mx-auto ba flex flex-col"
-    >
-      <div class="flex-1 min-w-[250px] flex justify-center">
-        <div class="w-48 h-48 rounded-full overflow-hidden bg-gray-200">
+
+    <main>
+      <!-- beranda -->
+      <!-- PERUBAHAN: Ditukar kepada flex-col untuk mobile, md:flex-row untuk desktop -->
+      <section
+        class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-14 px-6 py-20 max-w-4xl mx-auto text-center md:text-left"
+      >
+        <div
+          class="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden bg-gray-200 border-4 border-[#C49A45] shadow-lg shrink-0"
+        >
           <img
             src="img/profil.jpg"
             alt="foto"
             class="w-full h-full object-cover"
           />
         </div>
-      </div>
-      <div class="flex-1 min-w-[300px] pr-32 pl-32 justify-items-center">
-        <p class="text-[#C49A45] font-semibold mb-2">Web Developer</p>
-        <h1 class="text-4xl font-bold mb-4">Halo, saya Rendi Sanjana</h1>
-        <p class="text-center text-gray-500 mb-8">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-          provident nemo ducimus velit expedita, voluptates quia in inventore
-          tempore laudantium itaque praesentium!
-        </p>
-        <div class="flex gap-4 flex-wrap">
-          <a
-            href="#proyek"
-            class="inline-block px-6 py-3 rounded-md font-semibold text-black border border-black hover:-translate-y-1 hover:shadow-lg transition hover:bg-[#2A6B5C] hover:text-white"
-            >Lihat Karya</a
-          >
-          <a
-            href="#kontak"
-            class="inline-block px-6 py-3 rounded-md font-semibold border border-black text-gray-800 hover:-translate-y-1 hover:shadow-lg transition hover:bg-[#2A6B5C]"
-            >Hubungi Saya</a
-          >
-        </div>
-      </div>
-    </section>
-    <!-- biodata -->
-    <section id="tentang" class="max-w-3xl mx-auto px-6 py-20 text-center">
-      <h2 class="text-3xl font-bold mb-10 text-[#C49A45]">Tentang Saya</h2>
-      <div class="text-left">
-        <p class="text-gray-500 mb-4">
-          jadi saya seorang mahasiswa yang belajar di undiksha dan sekarang saya
-          masih belajar dengan giat.
-          <strong class="text-gray-800">Saya ambil jurusan TRPL</strong>, dengan
-          jurusan ini saya ingin menjadi
-          <strong class="text-gray-800"
-            >developer yang ahli dan membuat AI sendiri</strong
-          >.
-        </p>
-        <p class="text-gray-500">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nam
-          asperiores veniam accusantium odio perferendis voluptatum quam.
-        </p>
-      </div>
-    </section>
-
-    <!-- bagian skil -->
-    <section id="skill" class="max-w-5xl mx-auto px-6 py-20">
-      <h2 class="text-3xl font-bold text-center mb-10 text-[#C49A45]">
-        Skill Saya
-      </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
-        <div
-          class="bg-white border border-gray-200 rounded-lg p-6 text-center hover:-translate-y-1 transition"
-        >
-          <h3 class="text-[#C49A45] text-xl font-semibold mb-2">HTML</h3>
-          <p class="text-base text-black">membuat struktur halaman web.</p>
-        </div>
-        <div
-          class="bg-white border border-gray-200 rounded-lg p-6 text-center hover:-translate-y-1 transition"
-        >
-          <h3 class="text-[#C49A45] text-xl font-semibold mb-2">CSS</h3>
-          <p class="text-base text-black">
-            masih belajar mendesain halaman yang bagus dan responsif.
-          </p>
-        </div>
-        <div
-          class="bg-white border border-gray-200 rounded-lg p-6 text-center hover:-translate-y-1 transition"
-        >
-          <h3 class="text-[#C49A45] text-xl font-semibold mb-2">
-            Skill Lainnya
-          </h3>
-          <p class="text-base text-black">masih belajar menggunakan Python.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- proyek -->
-    <section id="proyek" class="max-w-5xl mx-auto px-6 py-20">
-      <h2 class="text-3xl font-bold text-center mb-10 text-[#C49A45]">
-        Proyek Saya
-      </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <div
-          class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:-translate-y-1 hover:shadow-lg transition"
-        >
-          <div class="h-40 bg-gray-200">
-            <img
-              src="img/image.png"
-              alt="proyek"
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <h3 class="mt-4 px-5 font-semibold">Nama Proyek 1</h3>
-          <p class="px-5 mt-2 text-sm text-gray-500">
-            Deskripsi singkat tentang proyek ini.
-          </p>
-          <div class="flex gap-2 flex-wrap px-5 mt-3">
-            <span
-              class="text-xs px-3 py-1 border border-gray-300 rounded-full text-gray-500"
-              >HTML</span
-            >
-            <span
-              class="text-xs px-3 py-1 border border-gray-300 rounded-full text-gray-500"
-              >CSS</span
-            >
-          </div>
-          <a
-            href="#"
-            class="block px-5 mt-4 mb-5 text-blue-600 font-semibold text-sm hover:underline"
-            >Lihat Proyek</a
-          >
-        </div>
-        <div
-          class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:-translate-y-1 hover:shadow-lg transition"
-        >
-          <div class="h-40 bg-gray-200">
-            <img
-              src="img/image.png"
-              alt="proyek"
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <h3 class="mt-4 px-5 font-semibold">Nama Proyek 1</h3>
-          <p class="px-5 mt-2 text-sm text-gray-500">
-            Deskripsi singkat tentang proyek ini.
-          </p>
-          <div class="flex gap-2 flex-wrap px-5 mt-3">
-            <span
-              class="text-xs px-3 py-1 border border-gray-300 rounded-full text-gray-500"
-              >HTML</span
-            >
-            <span
-              class="text-xs px-3 py-1 border border-gray-300 rounded-full text-gray-500"
-              >CSS</span
-            >
-          </div>
-          <a
-            href="#"
-            class="block px-5 mt-4 mb-5 text-blue-600 font-semibold text-sm hover:underline"
-            >Lihat Proyek</a
-          >
-        </div>
-        <div
-          class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:-translate-y-1 hover:shadow-lg transition"
-        >
-          <div class="h-40 bg-gray-200">
-            <img
-              src="img/image.png"
-              alt="proyek"
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <h3 class="mt-4 px-5 font-semibold">Nama Proyek 1</h3>
-          <p class="px-5 mt-2 text-sm text-gray-500">
-            Deskripsi singkat tentang proyek ini.
-          </p>
-          <div class="flex gap-2 flex-wrap px-5 mt-3">
-            <span
-              class="text-xs px-3 py-1 border border-gray-300 rounded-full text-gray-500"
-              >HTML</span
-            >
-            <span
-              class="text-xs px-3 py-1 border border-gray-300 rounded-full text-gray-500"
-              >CSS</span
-            >
-          </div>
-          <a
-            href="#"
-            class="block px-5 mt-4 mb-5 text-blue-600 font-semibold text-sm hover:underline"
-            >Lihat Proyek</a
-          >
-        </div>
-        <!-- copy div di atas 2x lagi untuk Proyek 2 dan 3, ganti teksnya -->
-      </div>
-    </section>
-
-    <!-- pengalaman pendidikan -->
-    <section id="pengalaman" class="max-w-3xl mx-auto px-6 py-20">
-      <h2 class="text-3xl font-bold text-center mb-10 text-[#C49A45]">
-        Pengalaman &amp; Pendidikan
-      </h2>
-      <div class="border-l-2 border-gray-200 pl-6">
-        <div class="mb-8">
-          <p class="text-blue-600 text-sm font-semibold mb-1">
-            2024 - Sekarang
-          </p>
-          <h3 class="font-semibold">Posisi / Kegiatan</h3>
-          <p class="text-gray-500 text-sm mb-2">Nama Sekolah / Perusahaan</p>
-          <p class="text-gray-500 text-sm">
-            Deskripsi singkat tentang apa yang kamu lakukan.
-          </p>
-        </div>
         <div>
-          <p class="text-blue-600 text-sm font-semibold mb-1">2022 - 2024</p>
-          <h3 class="font-semibold">Posisi / Kegiatan</h3>
-          <p class="text-gray-500 text-sm mb-2">Nama Sekolah / Perusahaan</p>
-          <p class="text-gray-500 text-sm">
-            Deskripsi singkat tentang apa yang kamu lakukan.
+          <p class="text-[#C49A45] font-semibold mb-2">Web Developer</p>
+          <h1 class="text-4xl font-bold mb-4">Halo, saya Rendi Sanjana</h1>
+          <p class="text-gray-500 mb-8 max-w-md mx-auto md:mx-0 text-justify">
+            Selamat datang di portofolio saya. Saya adalah pengembang web yang
+            selalu antusias mengubah ide-ide kompleks menjadi solusi digital
+            nyata. Memiliki ketertarikan mendalam pada teknologi modern,
+            perancangan sistem, dan eksplorasi kecerdasan buatan.
+          </p>
+          <div class="flex gap-4 flex-wrap justify-center md:justify-start">
+            <a
+              href="proyek.html"
+              class="inline-block px-6 py-3 rounded-md font-semibold text-black border border-black hover:-translate-y-1 hover:shadow-lg transition hover:bg-[#2A6B5C] hover:text-white"
+              >Lihat Karya</a
+            >
+
+            <a
+              href="#kontak"
+              class="inline-block px-6 py-3 rounded-md font-semibold border border-black text-gray-800 hover:-translate-y-1 hover:shadow-lg transition hover:bg-[#2A6B5C] hover:text-white"
+              >Hubungi Saya</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- tentang saya -->
+      <section id="tentang" class="max-w-3xl mx-auto px-6 py-20 text-center">
+        <h2 class="text-3xl font-bold mb-10 text-[#C49A45]">Tentang Saya</h2>
+        <div class="text-left">
+          <p class="text-gray-500 mb-4 text-justify">
+            Saya adalah seorang mahasiswa yang bersemangat mendalami dunia
+            teknologi, saat ini sedang menempuh pendidikan di Universitas
+            Pendidikan Ganesha (Undiksha).
+            <strong class="text-gray-800"
+              >Saya mengambil jurusan Teknologi Rekayasa Perangkat Lunak
+              (TRPL)</strong
+            >, di mana saya membekali diri dengan berbagai keahlian pemrograman
+            dan analisis sistem. Visi utama saya ke depan adalah menjadi
+            <strong class="text-gray-800"
+              >seorang developer ahli yang mampu menciptakan inovasi Kecerdasan
+              Buatan (AI) sendiri</strong
+            >.
+          </p>
+          <p class="text-gray-500 text-justify">
+            Fokus saya saat ini meliputi pengembangan aplikasi, perancangan
+            arsitektur perangkat lunak, dan manajemen basis data. Saya selalu
+            antusias mempelajari teknologi baru, merancang solusi yang efisien,
+            dan terus mengasah keterampilan saya agar dapat memberikan dampak
+            positif melalui karya di industri digital.
           </p>
         </div>
-      </div>
-    </section>
-    <!-- footer -->
-    <section id="kontak" class="max-w-2xl mx-auto px-6 py-20 text-center">
-      <h2 class="text-3xl font-bold mb-10 text-[#C49A45]">Hubungi Saya</h2>
-      <p class="text-gray-500 mb-6">
-        Kalau mau berdiskusi atau sekadar menyapa, silakan hubungi saya lewat:
-      </p>
-      <a
-        href="mailto:rendi123456778@gmail.com"
-        class="inline-block px-6 py-3 rounded-md font-semibold bg-blue-600 text-white hover:-translate-y-1 hover:shadow-lg transition"
-        >rendi123456778@gmail.com</a
-      >
-      <div class="flex justify-center gap-5 mt-8">
+      </section>
+
+      <!-- kontak -->
+      <section id="kontak" class="max-w-2xl mx-auto px-6 py-20 text-center">
+        <h2 class="text-3xl font-bold mb-10 text-[#C49A45]">Hubungi Saya</h2>
+        <p class="text-gray-500 mb-6">
+          Kalau mau berdiskusi atau sekadar menyapa, silakan hubungi saya lewat:
+        </p>
         <a
-          href="https://github.com/rendi123456778-cmyk"
-          target="_blank"
-          class="text-gray-800 border-b border-gray-300 pb-1 text-sm hover:text-blue-600 hover:border-blue-600 transition"
-          >GitHub</a
+          href="mailto:rendi123456778@gmail.com"
+          class="inline-block px-6 py-3 rounded-md font-semibold bg-[#2A6B5C] text-white hover:-translate-y-1 hover:shadow-lg transition break-all"
+          >rendi123456778@gmail.com</a
         >
-        <a
-          href="https://www.linkedin.com/in/rendi-sanjana-446572309/"
-          target="_blank"
-          class="text-gray-800 border-b border-gray-300 pb-1 text-sm hover:text-blue-600 hover:border-blue-600 transition"
-          >LinkedIn</a
-        >
-        <a
-          href="https://www.instagram.com/rendisanjana/"
-          target="_blank"
-          class="text-gray-800 border-b border-gray-300 pb-1 text-sm hover:text-blue-600 hover:border-blue-600 transition"
-          >Instagram</a
-        >
-      </div>
-    </section>
-    <section id="kontak" class="max-w-2xl mx-auto px-6 py-20 text-center">
-      <h2 class="text-3xl font-bold mb-10 text-[#C49A45]">TUGAS JAVASCRIPT</h2>
-      <a
-        href="kalkulator.html"
-        class="inline-block px-6 py-3 rounded-md font-semibold bg-blue-600 text-white hover:-translate-y-1 hover:shadow-lg transition"
-        >Klik Di Sini</a
-      >
-      </div>
-    </section>
+        <div class="flex justify-center flex-wrap gap-5 mt-8">
+          <a
+            href="https://github.com/rendi123456778-cmyk"
+            target="_blank"
+            class="text-gray-800 border-b border-gray-300 pb-1 text-sm hover:text-blue-600 hover:border-blue-600 transition"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/rendi-sanjana-446572309/"
+            target="_blank"
+            class="text-gray-800 border-b border-gray-300 pb-1 text-sm hover:text-blue-600 hover:border-blue-600 transition"
+            >LinkedIn</a
+          >
+          <a
+            href="https://www.instagram.com/rendisanjana/"
+            target="_blank"
+            class="text-gray-800 border-b border-gray-300 pb-1 text-sm hover:text-blue-600 hover:border-blue-600 transition"
+            >Instagram</a
+          >
+        </div>
+      </section>
+    </main>
+
     <footer
       class="text-center py-6 text-sm text-gray-500 border-t border-gray-200"
     >
       <p>&copy; 2026 Rendi Sanjana. Dibuat dengan HTML &amp; Tailwind CSS.</p>
     </footer>
-    <!-- File JavaScript, isinya masih kosong. Bisa diisi belakangan -->
+
+    <!-- Skrip untuk Menu Mobile -->
+    <script>
+      const btn = document.getElementById("mobile-btn");
+      const menu = document.getElementById("mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+        menu.classList.toggle("flex");
+      });
+    </script>
     <script src="script.js"></script>
   </body>
 </html>

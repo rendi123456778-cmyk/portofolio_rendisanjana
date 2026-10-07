@@ -2,7 +2,6 @@ function hitung(operator) {
   const a = Number(document.getElementById("angka1").value);
   const b = Number(document.getElementById("angka2").value);
   let hasil;
-
   if (operator === "+") {
     hasil = a + b;
   } else if (operator === "-") {
@@ -16,6 +15,5 @@ function hitung(operator) {
     }
     hasil = a / b;
   }
-
   document.getElementById("hasil").textContent = hasil;
 }
